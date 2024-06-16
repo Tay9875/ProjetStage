@@ -1,2 +1,2 @@
 # Escape game 
-Application d'apprentissage de codage <html, <css et <javascript
+Application d'apprentissage de codage Html, Css et Javascript
