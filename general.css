@@ -1,0 +1,44 @@
+body{
+	background: black;
+	color: whitesmoke;
+}
+
+header{
+	padding: 100px;
+}
+
+.sideBar{
+	padding: 100px;
+}
+
+.options{
+	display: flex;
+	align-items: flex-end;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 100px;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	font-size: 40px;
+	font-weight: 800px;
+}
+
+#credits{
+	font-size: 15px;
+}
+
+#credits h1{
+	font-size: 20px;
+	color: grey;
+}
+
+footer{
+	display: flex;
+	align-items: flex-end;
+	background: #232323;
+	color: whitesmoke;
+	padding: 100px;
+}
