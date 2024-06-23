@@ -4,7 +4,7 @@ body{
 }
 
 header{
-	padding: 100px;
+	padding-bottom: 200px;
 }
 
 .sideBar{
@@ -20,10 +20,24 @@ header{
 }
 
 a{
+	display: flex;
+	align-items: flex-end;
 	color: white;
 	text-decoration: none;
 	font-size: 40px;
 	font-weight: 800px;
+}
+
+a:hover{
+	width: 75%;
+	height: 150px;
+	border-radius: 10px;
+	background: whitesmoke;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 20px;
 }
 
 #credits{
@@ -34,6 +48,8 @@ a{
 	font-size: 20px;
 	color: grey;
 }
+
+
 
 footer{
 	display: flex;
