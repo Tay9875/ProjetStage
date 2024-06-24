@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Game - Apprendre HTML, CSS et JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="split-screen">
+        <div id="code-container">
+            <h2>Code HTML</h2>
+            <textarea id="code-input" placeholder="Écrivez votre code HTML ici..."></textarea>
+            <button id="run-code">Exécuter</button>
+        </div>
+        <div id="game-container">
+            <h1>Escape Game - Apprendre le Code</h1>
+            <div id="question-container">
+                <p id="question"></p>
+                <input type="text" id="answer" placeholder="Votre réponse">
+                <button id="submit-answer">Soumettre</button>
+            </div>
+            <p id="feedback"></p>
+            <p id="level"></p>
+            <div id="rendered-output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
