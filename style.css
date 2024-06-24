@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#split-screen {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#code-container, #game-container {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#code-container {
+    background-color: #272822;
+    color: #f8f8f2;
+}
+
+#code-container h2 {
+    color: #f92672;
+}
+
+#code-input {
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: #272822;
+    color: #f8f8f2;
+    border: none;
+    resize: none;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+#run-code {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#run-code:hover {
+    background-color: #218838;
+}
+
+#game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#question-container {
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#feedback {
+    margin: 20px 0;
+}
+
+#level {
+    font-weight: bold;
+}
+
+#rendered-output {
+    margin-top: 20px;
+    text-align: left;
+}
