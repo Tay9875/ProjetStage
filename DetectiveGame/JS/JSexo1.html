@@ -22,8 +22,7 @@
             <div class="instructions">
                 <p>
                     Bienvenue sur Détective Code, un jeu où vous aidez un Détective
-                    en écrivant du code CSS! Guidez le Détective en répondant aux 
-                    questions pour qu'il puisse retrouver John Eric.
+                    en écrivant du code JavaScript! Répondez aux questions pour progresser et résoudre l'affaire.
                 </p>
                 <ul>
                     <li>var: Permet de déclarer une variable et éventuellement d'initialiser sa valeur.</li>
@@ -31,7 +30,7 @@
                     <li>function: Un ensemble d'instructions effectuant une tâche ou calculant une valeur.</li>
                     <li>nomDeLaFonction(): Propriété en lecture seule qui renvoie le nom de la fonction courante.</li>
                     <li>document.getElementById: Sélectionne un élément grâce à son attribut id.</li>
-                    <li>addEventListener: Attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible..</li>
+                    <li>addEventListener: Attache une fonction à appeler chaque fois que l'évènement spécifié est envoyé à la cible.</li>
                     <li>innerText: Une propriété représentant le contenu textuel « visuellement rendu » d'un nœud.</li>
                     <li>===: L'égalité stricte.</li>
                 </ul>
@@ -59,71 +58,10 @@
     </section>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="questions3.js"></script>
+    <script src="scriptFormulaire3.js"></script>
 
     <script>
-        let currentQuestionIndex = 0;
-
-        function displayQuestion() {
-            const question = questions[currentQuestionIndex];
-            const questionContainer = document.getElementById('question-container');
-
-            const questionElement = document.createElement('p');
-            questionElement.textContent = question.question;
-            questionElement.id = `question${currentQuestionIndex + 1}`;
-
-            const answerInput = document.createElement('input');
-            answerInput.type = 'text';
-            answerInput.id = `answer${currentQuestionIndex + 1}`;
-            answerInput.placeholder = 'Votre réponse';
-
-           
-            answerInput.setAttribute('autocomplete', 'off');
-
-            const answerButton = document.createElement('button');
-            answerButton.textContent = 'Valider';
-            answerButton.addEventListener('click', validateAnswer);
-
-            questionContainer.innerHTML = '';
-            questionContainer.appendChild(questionElement);
-            questionContainer.appendChild(answerInput);
-            questionContainer.appendChild(answerButton);
-
-            document.getElementById('feedback').textContent = '';
-        }
-
-        function validateAnswer() {
-            const answerElement = document.getElementById(`answer${currentQuestionIndex + 1}`);
-            const answer = answerElement.value.trim().toLowerCase();
-            const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase(); 
-
-            console.log("User Answer:", answer);
-            console.log("Correct Answer:", correctAnswer);
-
-            if (answer === correctAnswer) {
-                document.getElementById('feedback').textContent = 'Bonne réponse !';
-                currentQuestionIndex++;
-
-                if (currentQuestionIndex < questions.length) {
-                    displayQuestion();
-                } else {
-                    document.getElementById('feedback').textContent = 'Toutes les questions ont été résolues ! Félicitations !';
-                    document.getElementById('question-container').innerHTML = ''; 
-                }
-            } else {
-                document.getElementById('feedback').textContent = 'Réponse incorrecte. Essayez à nouveau.';
-            }
-
-            answerElement.value = ''; 
-        }
-
-        function run() {
-            let htmlCode = document.getElementById("html-code").value;
-            let output = document.getElementById("output");
-            output.contentDocument.body.innerHTML = htmlCode;
-        }
-
-        displayQuestion();
+        displayQuestion(); 
     </script>
 </body>
 </html>
