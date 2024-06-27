@@ -1,105 +1,99 @@
 const questions = [
     {
-        question: "Comment déclare-t-on une variable en JavaScript ?",
-        answer: "var",
-        code: "var maVariable = 'valeur';"
+        question: "Quelle balise utilise-t-on pour créer un lien hypertexte ?",
+        answer: "<a>",
+        code: "<a href='http://example.com'>Exemple</a>"
     },
     {
-        question: "Quelle méthode est utilisée pour afficher un message dans la console ?",
-        answer: "console.log",
-        code: "console.log('Message');"
+        question: "Quelle balise utilise-t-on pour une image ?",
+        answer: "<img>",
+        code: "<img src='image.jpg' alt='Description'>"
     },
     {
-        question: "Comment crée-t-on une fonction en JavaScript ?",
-        answer: "function",
-        code: "function maFonction() {\n  // Code de la fonction\n}"
+        question: "Quelle balise utilise-t-on pour créer un paragraphe ?",
+        answer: "<p>",
+        code: "<p>Ceci est un paragraphe.</p>"
     },
     {
-        question: "Comment appelle-t-on une fonction en JavaScript ?",
-        answer: "nomDeLaFonction()",
-        code: "maFonction();"
+        question: "Quelle balise utilise-t-on pour un titre de niveau 1 ?",
+        answer: "<h1>",
+        code: "<h1>Titre de niveau 1</h1>"
     },
     {
-        question: "Comment accède-t-on à un élément par son ID en JavaScript ?",
-        answer: "document.getElementById",
-        code: "var element = document.getElementById('monID');"
+        question: "Quelle balise utilise-t-on pour une liste non ordonnée ?",
+        answer: "<ul>",
+        code: "<ul>\n    <li>Élément 1</li>\n    <li>Élément 2</li>\n</ul>"
     },
     {
-        question: "Quelle méthode est utilisée pour ajouter un écouteur d'événements à un élément ?",
-        answer: "addEventListener",
-        code: "element.addEventListener('click', function() {\n  // Code à exécuter lors du clic\n});"
+        question: "Quelle balise utilise-t-on pour une liste ordonnée ?",
+        answer: "<ol>",
+        code: "<ol>\n    <li>Élément 1</li>\n    <li>Élément 2</li>\n</ol>"
     },
     {
-        question: "Comment changer le contenu texte d'un élément en JavaScript ?",
-        answer: "innerText",
-        code: "element.innerText = 'Nouveau texte';"
+        question: "Quelle balise utilise-t-on pour un champ de saisie de texte ?",
+        answer: "<input>",
+        code: "<input type='text' placeholder='Votre texte ici'>"
     },
     {
-        question: "Comment vérifier si deux valeurs sont égales en JavaScript ?",
-        answer: "===",
-        code: "if (a === b) {\n  // Code si a est égal à b\n}"
+        question: "Quelle balise utilise-t-on pour insérer une ligne horizontale ?",
+        answer: "<hr>",
+        code: "<hr>"
     }
 ];
 
-let htmlCode = document.getElementById("html-code").value;
+
+    let htmlCode = document.getElementById("html-code").value;
     let output = document.getElementById("rendered-output");
     output.innerHTML = htmlCode;
-
-let currentQuestionIndex = 0;
+  
 
 function displayQuestion() {
-    const question = questions[currentQuestionIndex];
     const questionContainer = document.getElementById('question-container');
+    const feedback = document.getElementById('feedback');
 
-    const questionElement = document.createElement('p');
-    questionElement.textContent = question.question;
-    questionElement.id = `question${currentQuestionIndex + 1}`;
+    let currentQuestionIndex = 0;
 
-    const answerInput = document.createElement('input');
-    answerInput.type = 'text';
-    answerInput.id = `answer${currentQuestionIndex + 1}`;
-    answerInput.placeholder = 'Votre réponse';
+    function renderQuestion() {
+        const question = questions[currentQuestionIndex];
 
-    answerInput.setAttribute('autocomplete', 'off');
+        const questionElement = document.createElement('p');
+        questionElement.textContent = question.question;
+        questionContainer.innerHTML = '';
+        questionContainer.appendChild(questionElement);
 
-    const answerButton = document.createElement('button');
-    answerButton.textContent = 'Valider';
-    answerButton.addEventListener('click', validateAnswer);
+        const answerInput = document.createElement('input');
+        answerInput.type = 'text';
+        answerInput.placeholder = 'Votre réponse';
+        questionContainer.appendChild(answerInput);
 
-    questionContainer.innerHTML = '';
-    questionContainer.appendChild(questionElement);
-    questionContainer.appendChild(answerInput);
-    questionContainer.appendChild(answerButton);
+        const validateButton = document.createElement('button');
+        validateButton.textContent = 'Valider';
+        validateButton.addEventListener('click', function () {
+            validateAnswer(answerInput.value.trim().toLowerCase(), question.answer);
+        });
+        questionContainer.appendChild(validateButton);
 
-    document.getElementById('feedback').textContent = '';
-}
-
-function validateAnswer() {
-    const answerElement = document.getElementById(`answer${currentQuestionIndex + 1}`);
-    const answer = answerElement.value.trim().toLowerCase();
-    const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase(); 
-
-    console.log("User Answer:", answer);
-    console.log("Correct Answer:", correctAnswer);
-
-    if (answer === correctAnswer) {
-        document.getElementById('feedback').textContent = 'Bonne réponse !';
-        currentQuestionIndex++;
-
-        if (currentQuestionIndex < questions.length) {
-            displayQuestion();
-        } else {
-            document.getElementById('feedback').textContent = 'Toutes les questions ont été résolues ! Félicitations !';
-            document.getElementById('question-container').innerHTML = '';
-
-            // Redirection vers JSexo2.html
-            window.location.href = 'JSexo2.html';
-        }
-    } else {
-        document.getElementById('feedback').textContent = 'Réponse incorrecte. Essayez à nouveau.';
+        feedback.textContent = '';
     }
 
-    answerElement.value = ''; 
-}
+    function validateAnswer(userAnswer, correctAnswer) {
+        if (userAnswer === correctAnswer.toLowerCase()) {
+            feedback.textContent = 'Bonne réponse !';
+            currentQuestionIndex++;
 
-displayQuestion();
+            if (currentQuestionIndex < questions.length) {
+                renderQuestion();
+            } else {
+                feedback.textContent = 'Toutes les questions ont été résolues !';
+                
+                window.location.href = 'CSSexo1.html';
+            }
+        } else {
+            feedback.textContent = 'Réponse incorrecte. Essayez à nouveau.';
+            
+            answerInput.value = '';
+        }
+    }
+
+    renderQuestion();
+}
