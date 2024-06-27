@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Code</title>
+    <script src="https://kit.fontawesome.com/1b7208d25c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="formulaire2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="row">
+        <div class="col-md-6 sideBar">
+            <header>
+                <a href="Accueil.html"><img src="images/LOGO.png" alt="Logo"></a>
+            </header>
+
+            <div class="instructions">
+                <p>Arrivé chez le disparu</p>
+                <p>Vous trouvez des signes d'effractions et des affaires éparpillés avec une note manuscrite que vous devez déchiffrer</p>
+                <div id="question-container">
+                    <p id="histoire"></p>
+                    <p>Pour cela, vous devez répondre à 6 questions :</p>
+                    <ul>
+                        <li><span class="def">let</span> : déclaration d'une variable à portée de bloc.</li><br>
+                        <li><span class="def">const</span> : déclaration d'une constante.</li><br>
+                        <li><span class="def">function</span> : déclaration d'une fonction.</li><br>
+                        <li><span class="def">if</span> : structure de contrôle conditionnelle.</li><br>
+                        <li><span class="def">for</span> : boucle qui répète jusqu'à ce qu'une condition spécifiée soit fausse.</li><br>
+                        <li><span class="def">return</span> : arrêt de l'exécution d'une fonction et renvoi d'une valeur.</li><br>
+                    </ul>
+                    <p>La lettre mentionne un nom et un lieu</p>
+                    <p id="question"></p>
+                </div>
+                <p id="feedback" class="response" style="color: red;"></p>
+            </div>
+            <div id="code-editor">
+                <div class="numbers">1<br>2<br>3<br>4<br>5</div>
+                <div id="right" class="hovertext" data-hover="Faites attention aux espaces et aux erreurs de frappe">
+                    <textarea id="code-input" onkeyup="runCode()" readonly></textarea>
+                    <textarea id="answer" placeholder="Écrivez votre code JavaScript ici..."></textarea>
+                    <button id="run-code" onclick="runCode()">Exécuter</button>
+                </div>
+            </div>
+            <div id="next-step" style="margin-top: 20px;"></div>
+        </div>
+        <div class="col-md-6 out">
+            <div id="game-container">
+                <img src="images/HTMLexo2.jpg" style="width: 100%; height: auto; border-top-right-radius: 10px; border-top-left-radius: 10px;">
+                <div id="rendered-output" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; margin-top: 10px;"></div>
+            </div>
+            <small>Projet de stage 2024 - Hadrien Lennon & Talyha Moreau-Littré</small>
+        </div>
+    </section>
+
+    <script src="scriptJS3.js"></script>
+</body>
+</html>
