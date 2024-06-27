@@ -11,8 +11,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-link {
+            font-size: 14px; /* Ajuster la taille de la police ici */
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Accueil.html">Accueil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTMLexo1.html">Exercice 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTMLexo2.html">Exercice 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <section class="row">
         <div class="col-md-6 sideBar">
             <header>
@@ -21,7 +45,7 @@
 
             <div class="instructions">
                 <p>Arrivé chez le disparu</p>
-                <p>Vous trouvez des signes d'effractions et des affaires éparpillés avec une note manuscrite que vous devez déchiffrer</p>
+                <p>Vous trouvez des signes d'effractions et des affaires éparpillées avec une note manuscrite que vous devez déchiffrer</p>
                 <div id="question-container">
                     <p id="histoire"></p>
                     <p>Pour cela, vous devez répondre à 6 questions :</p>
@@ -33,7 +57,7 @@
                         <li><span class="def">textarea</span> : utilisé pour créer une zone de texte multiligne où les utilisateurs peuvent saisir du texte.</li><br>
                         <li><span class="def">label</span> : permet de formuler un intitulé à un champ de formulaire.</li><br>
                     </ul>
-                    <p>La letre mentionne un nom et un lieu</p>
+                    <p>La lettre mentionne un nom et un lieu</p>
                     <p id="question"></p>
                 </div>
                 <p id="feedback" class="response" style="color: red;"></p>
