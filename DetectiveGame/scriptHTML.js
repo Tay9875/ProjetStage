@@ -30,11 +30,6 @@ const questions = [
         code: "<ol>\n    <li>Élément 1</li>\n    <li>Élément 2</li>\n</ol>"
     },
     {
-        question: "Quelle balise utilise-t-on pour un champ de saisie de texte ?",
-        answer: "<input>",
-        code: "<input type='text' placeholder='Votre texte ici'>"
-    },
-    {
         question: "Quelle balise utilise-t-on pour insérer une ligne horizontale ?",
         answer: "<hr>",
         code: "<hr>"
@@ -83,10 +78,8 @@ function displayQuestion() {
 
             if (currentQuestionIndex < questions.length) {
                 renderQuestion();
-            } else {
-                feedback.textContent = 'Toutes les questions ont été résolues !';
-                
-                window.location.href = 'CSSexo1.html';
+            } else {                
+                window.location.href = 'HTMLexo2.html';
             }
         } else {
             feedback.textContent = 'Réponse incorrecte. Essayez à nouveau.';
