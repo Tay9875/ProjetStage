@@ -13,10 +13,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Courier+Prime&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Accueil.html">Accueil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTMLexo2.html">Exercice 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="HTMLexo3.html">Exercice 3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <section class="row">
         <div class="col-md-6 sideBar">
             <header>
-                <a href="Accueil.html"><img src="images/LOGO.png"></a>
+                <a href="Accueil.html"><img src="images/LOGO.png" alt="Logo"></a>
             </header>
 
             <div class="instructions">
@@ -44,7 +63,7 @@
 
     <h2>John Eric</h2>
 
-    <img src="profil.png"><br>
+    <img src="profil.png" alt="Profil"><br>
 
     <h6>Genre: Male</h6>
     <h6>Âge: 40</h6>
@@ -74,7 +93,7 @@
         </div>
     </section>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scriptHTML.js"></script> <!-- Mettre à jour le nom du fichier JavaScript -->
     <script>
         displayQuestion(); 
