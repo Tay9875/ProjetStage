@@ -41,11 +41,11 @@ const questions = [
     }
 ];
 
-    let currentQuestionIndex = 0;
-    
-    let htmlCode = document.getElementById("html-code").value;
-    let output = document.getElementById("rendered-output");
-    output.innerHTML = htmlCode;
+let currentQuestionIndex = 0;
+
+let htmlCode = document.getElementById("html-code").value;
+let output = document.getElementById("rendered-output");
+output.innerHTML = htmlCode;
 
 function displayQuestion() {
     const question = questions[currentQuestionIndex];
@@ -83,7 +83,7 @@ function validateAnswer() {
 
         if (currentQuestionIndex === questions.length - 1) {
             setTimeout(function() {
-                window.location.href = 'JSexo1.html'; // Redirection vers la prochaine étape du jeu
+                window.location.href = 'CSSexo2.html'; // Redirection vers la prochaine étape du jeu
             }, 1000); // Délai avant redirection
         } else {
             currentQuestionIndex++;
@@ -96,8 +96,5 @@ function validateAnswer() {
         answerInput.value = ''; // Effacer le champ de réponse
     }
 }
-
-
-
 
 displayQuestion(); // Appel initial pour afficher la première question
