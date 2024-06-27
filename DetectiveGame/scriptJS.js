@@ -41,10 +41,7 @@ const questions = [
     }
 ];
 
-
-
-
-    let htmlCode = document.getElementById("html-code").value;
+let htmlCode = document.getElementById("html-code").value;
     let output = document.getElementById("rendered-output");
     output.innerHTML = htmlCode;
 
@@ -93,7 +90,10 @@ function validateAnswer() {
             displayQuestion();
         } else {
             document.getElementById('feedback').textContent = 'Toutes les questions ont été résolues ! Félicitations !';
-            document.getElementById('question-container').innerHTML = ''; 
+            document.getElementById('question-container').innerHTML = '';
+
+            // Redirection vers JSexo2.html
+            window.location.href = 'JSexo2.html';
         }
     } else {
         document.getElementById('feedback').textContent = 'Réponse incorrecte. Essayez à nouveau.';
@@ -102,7 +102,4 @@ function validateAnswer() {
     answerElement.value = ''; 
 }
 
-
-
 displayQuestion();
-
