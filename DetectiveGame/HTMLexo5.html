@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="formulaire1.css">
+    <link rel="stylesheet" href="HTMLexo5_6_7.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Courier Prime&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="subnav">
+        <button class="subnavbtn">Exercices</button>
+        <div class="subnav-content">
+            <a href="HTMLexo1.html" class="ex">1</a>
+            <a href="HTMLexo2.html" class="ex">2</a>
+            <a href="HTMLexo3.html" class="ex">3</a>
+            <a href="HTMLexo4.html" class="ex">4</a>
+            <a href="HTMLexo5.html" class="ex">5</a>
+            <a href="HTMLexo6.html" class="ex">6</a>
+            <a href="HTMLexo7.html" class="ex">7</a>
+            <a href="HTMLexo8.html" class="ex">8</a>
+        </div>
+    </div>
+
+    <section class="row">
+        <div class="col-md-6 sideBar">
+            <header>
+                <a href="Accueil.html"><img src="images/LOGO.png" alt="Logo"></a>
+            </header>
+
+            <div class="instructions">
+                <p>
+                    Une fois le détective rentré dans le bureau, et se rendant compte que le bureau est resté dans le même état qu’au moment de la première visite des enquêteurs, il décide de commencer a regarder le plus évident: l’ordinateur.
+                </p>
+                <p>Regarder l’ordinateur du disparu en répondant à toutes les questions afin de débloquer le pc (cours sur les form).</p>
+
+                <p id="histoire"></p>
+                <p>Pour cela vous devez répondre à 6 questions.</p>
+
+                <ul>
+                    <li><span class="def hovertext" data-hover="contient un attribut 'action' qui permet d'appeler un fichier PHP">form</span> : représente un formulaire.</li><br>
+                    <li><span class="def">select</span> : représente un contrôle qui fournit une liste d'options parmis lequelles l'utilisateur pourra choisir.</li><br>
+                    <li><span class="def">input</span> : utilisé pour un contrôle interactif dans un formulaire web.</li><br>
+                    <li><span class="def">button</span> : utilisé pour créer un boutton dans un formulaire.</li><br>
+                    <li><span class="def">textarea</span>: utilisé pour créer une zone de texte multiligne où les utilisateurs peuvent saisir du texte.</li><br>
+                    <li><span class="def">label</span> : permet de formuler un intitulé à un champ de formulaire.</li><br>
+                </ul>
+                <div id="code-editor">
+                    <div class="numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</div>
+                        <textarea id="html-code" class="no-modify-request scroll" rows="9" readonly>
+<form action="/unlock_pc" method="post">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" value="John Eric" readonly><br>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" value="1234" readonly><br>
+</form>
+</textarea>
+                </div>
+            </div>
+            <div class="answer-container" id="question-container"></div>
+            <p class="response" id="feedback"></p>
+        </div>
+        <div class="col-md-6 out">
+            <div id="game-container-perso">
+                <div id="rendered-output"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="row">
+        <div class="col-md-6" id="credits">
+            <strong><h1>Hadrien Lennon</h1></strong>
+            <p>Etudiant en Bachelor Informatique, se spécialisant dans la Data & IA</p>
+        </div>
+        <div class="col-md-6" id="credits">
+            <strong><h1>Talyha Moreau-littré</h1></strong>
+            <p>Etudiante en bachelor informatique, se spécialisant dans la Conception et le Développement d'Applications</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const questions = [
+        {
+        question: "Quelle balise utilise-t-on pour créer un formulaire ?",
+        answer: "<form>",
+        code: "<form action='/submit' method='post'>\n    <!-- éléments du formulaire -->\n</form>"
+    },
+    {
+        question: "Quelle balise utilise-t-on pour créer une liste d'options ?",
+        answer: "<select>",
+        code: "<select>\n    <option value='1'>Option 1</option>\n    <option value='2'>Option 2</option>\n</select>"
+    },
+    {
+        question: "Quelle balise utilise-t-on pour un contrôle interactif dans un formulaire web ?",
+        answer: "<input>",
+        code: "<input type='text' name='username'>"
+    },
+    {
+        question: "Quelle balise utilise-t-on pour créer un bouton dans un formulaire ?",
+        answer: "<button>",
+        code: "<button type='submit'>Envoyer</button>"
+    },
+    {
+        question: "Quelle balise utilise-t-on pour créer une zone de texte multiligne ?",
+        answer: "<textarea>",
+        code: "<textarea name='message' rows='4' cols='50'></textarea>"
+    },
+    {
+        question: "Quelle balise utilise-t-on pour formuler un intitulé à un champ de formulaire ?",
+        answer: "<label>",
+        code: "<label for='username'>Nom d'utilisateur :</label>"
+    }
+];
+
+        const href='HTMLexo6.html';
+        
+    </script>
+    <script src="scriptHTML.js"></script> <!-- Mettre à jour le nom du fichier JavaScript -->
+    <script>
+        displayQuestion(); 
+    </script>
+
+</body>
+</html>

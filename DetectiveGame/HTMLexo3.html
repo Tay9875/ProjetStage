@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Code</title>
+    <script src="https://kit.fontawesome.com/1b7208d25c.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="formulaire2.css">
+    <link rel="stylesheet" href="HTMLexo3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Courier+Prime&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-link {
+            font-size: 14px; /* Ajuster la taille de la police ici */
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/1b7208d25c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="subnav">
+        <button class="subnavbtn">Exercices</button>
+        <div class="subnav-content">
+                <a href="HTMLexo1.html" class="ex">1</a>
+                <a href="HTMLexo2.html" class="ex">2</a>
+                <a href="HTMLexo3.html" class="ex">3</a>
+                <a href="HTMLexo4.html" class="ex">4</a>
+                <a href="HTMLexo5.html" class="ex">5</a>
+                <a href="HTMLexo6.html" class="ex">6</a>
+                <a href="HTMLexo7.html" class="ex">7</a>
+                <a href="HTMLexo8.html" class="ex">8</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="row">
+        <div class="col-md-6 sideBar">
+            <header>
+                <a href="Accueil.html"><img src="images/LOGO.png" alt="Logo"></a>
+            </header>
+
+            <div class="instructions">
+                <div id="question-container">
+                    <p id="histoire"></p>
+                    <span class="hovertext" data-hover="<img> est une des seules balises qui n'est pas suivi de </img>"><p id="question"></p></span>
+                    <p>L'image dont vous avez besoin se prénomme <span class="def">'ancienne_image'</span> en format <span class="def">JPG</span> dans le dossier <span class="def">'images'</span>.</p>
+                </div>
+                <p id="feedback" class="response"></p>
+            </div>
+            <div id="code-editor">
+                <div class="numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+                <div id="right" class="hovertext" data-hover="Faites attention aux espaces et aux erreurs de frappe">
+                    <textarea id="html-code" onkeyup="runCode()" class="ligne scroll" readonly>
+<div id='ordinateur'>
+                    </textarea>
+                    <textarea id="answer" rows="1"><... src='...' class='ecran'></textarea>
+                    <textarea id="html-code-2" onkeyup="runCode()" class="ligne scroll" readonly>
+</div>
+                    </textarea>
+
+                    <button id="run-code" onclick="runCode()">Executer</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 out">
+            <div id="game-container-perso">
+                <div id="rendered-output"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="row">
+        <div class="col-md-6" id="credits">
+            <strong><h1>Hadrien Lennon</h1></strong>
+            <p>Etudiant en Bachelor Informatique, se spécialisant dans la Data & IA</p>
+        </div>
+        <div class="col-md-6" id="credits">
+            <strong><h1>Talyha Moreau-littré</h1></strong>
+            <p>Etudiante en bachelor informatique, se spécialisant dans la Conception et le Développement d'Applications</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        const questions = { 
+                            histoire: "Arrivé au bureau, le Détective se rend compte que les seules personnes restantes à cette heure tardive sont les employés de sécurité et de maintenance, mais heureusement, aucun est en vue. Avant tout, la discrétion serait idéale."
+                            ,question: "Afficher une image enregistrée plus tôt pour ne pas être aperçu."
+                            ,answer: "<img src='images/ancienne_image.jpg' class='ecran'>"
+                        };
+        const href = 'HTMLexo4.html'; // Définir l'URL cible
+    </script>
+    <script src="scriptQuestion_2.js"></script>
+</body>
+</html>

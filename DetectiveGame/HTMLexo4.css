@@ -1,0 +1,52 @@
+ #game-container-perso{
+    width: 90%;
+    height: 70%;
+    color: black;
+    font-weight: bold;
+    font-family: 'Courier Prime',sans-serif;
+    display: flex;
+    justify-content: center;
+ }
+
+.verrou{
+	background-color: #666666;
+	width: 100%;
+	height: auto;
+}
+
+.clavier{
+	background-repeat: no-repeat;
+    background-size: 100% auto;
+    object-fit: fill;
+}
+
+#entree{
+	background-image: url('images/entree.png');
+	background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 150px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#entree p{
+	font-size: 100px;
+}
+
+.Or{
+	color: orange;
+}
+
+.Ve{
+	color: limegreen;
+}
+
+.Ble{
+	color: blue;
+}
+
+.Ja{
+	color: yellow;
+}

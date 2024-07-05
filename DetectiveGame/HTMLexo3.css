@@ -1,0 +1,26 @@
+  #game-container-perso{
+    width: 90%;
+    height: 60%;
+    background-image: url('images/ordinateur.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    color: white;
+    font-family: 'Courier Prime',sans-serif;
+  }
+
+  .ecran{
+  	margin-top: 18%;
+    margin-left: 8%;
+    width: 84%;
+    height: 60%;
+    object-fit: fill;
+  }
+
+  #answer image{
+  	object-fit: fill;
+  }
+  
+
+  #rendered-output-perso{
+    font-size: 11px;
+  }

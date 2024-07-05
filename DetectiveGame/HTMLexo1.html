@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="HTMLexo1.css">
+    <link rel="stylesheet" href="formulaire1.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Quicksand&family=Courier Prime&family=Barriecito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="subnav">
+        <button class="subnavbtn">Exercices</button>
+        <div class="subnav-content">
+                <a href="HTMLexo1.html" class="ex">1</a>
+                <a href="HTMLexo2.html" class="ex">2</a>
+                <a href="HTMLexo3.html" class="ex">3</a>
+                <a href="HTMLexo4.html" class="ex">4</a>
+                <a href="HTMLexo5.html" class="ex">5</a>
+                <a href="HTMLexo6.html" class="ex">6</a>
+                <a href="HTMLexo7.html" class="ex">7</a>
+                <a href="HTMLexo8.html" class="ex">8</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="row">
+        <div class="col-md-6 sideBar">
+            <header>
+                <a href="Accueil.html"><img src="images/LOGO.png" alt="Logo"></a>
+            </header>
+
+            <div class="instructions">
+                <p>
+                    Hmmmmmm ! Peut-être qu'en étudiant ce document vous pourrez trouvé quelque chose d'intéressant.
+                </p>
+                <p>
+                    En regardant le document, beaucoup de notions de texte basiques sont référencées. Analyser le code fourni afin de mieux comprendre l'utilisation des balises dans le <span class="def hovertext" data-hover="Représente le contenu principal du document HTML"> body </span> du code.</p>
+                <ul>
+                    <li><span class="def hovertext" data-hover="Taille variante de <h1> à <h6>"> h</span>: désigne un titre sur la page d'un site Interne.</li><br>
+                    <li><span class="def"> p </span>: représente un paragraphe de texte.</li><br>
+                    <li><span class="def"> div </span>: conteneur 'pur' pouvant être utiliser pour créer des blocs de contenu ou des mises en page.</li><br>
+                    <li><span class="def"> a </span>: un lien hypertexte permet de changer de page et/ou amener vers un endroit précis d'une page.</li><br>
+                    <li><span class="def"> img </span>: pour insérer une image en HTML.</li><br>
+                    <li><span class="def hovertext" data-hover="<ul> étant non-ordonnée é <ol> étant ordonnée"> ul,ol </span>: liste d'éléments.</li><br>
+                    <li><span class="def"> hr </span>: permet de tracer un trait de séparation dans le texte.</li><br>
+                </ul>
+                <div id="code-editor">
+                    <div class="numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</div>
+                        <textarea id="html-code" class="no-modify-request" readonly>
+<div class="document">
+
+    <img src="images/profil.png" alt="Profil" style="width: 75px; height: auto;"><br>
+
+    <h2>John Eric</h2>
+
+    <h6>Genre: Male</h6>
+    <h6>Âge: 40</h6>
+    <h6>Lieu de résidence: Paris, 15eme arrondissement</h6>
+    <h6>Métier: DG NovaLign, 38 Rue de l'Entrepreneur</h6>
+
+    <hr>
+
+    <ul>
+        <li>Directeur général d'une compagnie associée à TechCorp</li>
+
+        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Numero de bureau: 01 23 45 67 89</a></li>
+
+        <li>Bureau retrouvé saccagé ! Collègues attestent aucune disparition ou vol ???</li>
+        
+        <li>Temoin atteste avoir vu une silhouette dans le bureau du disparu entre 21:00 et 03:00</li>
+    </ul>
+
+    <p>Chargé d'enquête: Détective Morales</p>
+
+</div>
+
+</textarea>
+                </div>
+            </div>
+            <div class="answer-container" id="question-container"></div>
+            <p class="response" id="feedback"></p>
+        </div>
+        <div class="col-md-6 out">
+            <div id="game-container-perso">
+                <div class="overflow"><div id="rendered-output"></div></div>
+                <img src="images/cles.png" style="width: 100px;height: auto;">
+                <img src="images/usb.png" style="width: 100px;height: auto;">
+                <img src="images/code.png" style="width: 175px;height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <footer class="row">
+        <div class="col-md-6" id="credits">
+            <strong><h1>Hadrien Lennon</h1></strong>
+            <p>Etudiant en Bachelor Informatique, se spécialisant dans la Data & IA</p>
+        </div>
+        <div class="col-md-6" id="credits">
+            <strong><h1>Talyha Moreau-littré</h1></strong>
+            <p>Etudiante en bachelor informatique, se spécialisant dans la Conception et le Développement d'Applications</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const questions = [
+            {
+                question: "Quelle balise utilise-t-on pour créer un lien hypertexte ?",
+                answer: "<a>",
+                code: "<a href='http://example.com'>Exemple</a>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour une image ?",
+                answer: "<img>",
+                code: "<img src='image.jpg' alt='Description'>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour créer un paragraphe ?",
+                answer: "<p>",
+                code: "<p>Ceci est un paragraphe.</p>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour un titre de niveau 1 ?",
+                answer: "<h1>",
+                code: "<h1>Titre de niveau 1</h1>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour une liste non ordonnée ?",
+                answer: "<ul>",
+                code: "<ul>\n    <li>Élément 1</li>\n    <li>Élément 2</li>\n</ul>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour une liste ordonnée ?",
+                answer: "<ol>",
+                code: "<ol>\n    <li>Élément 1</li>\n    <li>Élément 2</li>\n</ol>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour insérer une ligne horizontale ?",
+                answer: "<hr>",
+                code: "<hr>"
+            },
+            {
+                question: "Quelle balise utilise-t-on pour rassembler du conteneur dans un bloc ?",
+                answer: "<div>",
+                code: "<div class='exemple'></div>"
+            }
+        ];
+
+        const href='HTMLexo2.html';
+        
+    </script>
+    <script src="scriptHTML.js"></script> <!-- Mettre à jour le nom du fichier JavaScript -->
+    <script>
+        displayQuestion(); 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+#code-editor{
+    width: 100%;
+    background: #232323;
+    border: none;
+    display: flex;
+  }
+  
+  .numbers{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    background: #444242;
+    color: #e0e0e0;
+  }
+  
+  #answer{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    background: #e0e0e0;
+    color: #232323;
+  }
+  
+  #answer::placeholder {
+    color: grey;
+  }
+  
+  button{
+    background: #EF4243;
+    color: white;
+    padding: 10px;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    margin: 25px;
+  }
+  
+  #right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  #game-container {
+      width: 90%;
+      height: 80%;
+      background: #fff;
+      color: black;
+      border-radius: 10px;
+  }
+  
+  #rendered-output {
+      margin-top: 20px;
+      text-align: left;
+  }
